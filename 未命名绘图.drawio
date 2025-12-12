@@ -1,9 +1,84 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.4">
   <diagram name="第 1 页" id="MA-KpiTEAzJpyDIO59gJ">
-    <mxGraphModel>
+    <mxGraphModel dx="1234" dy="696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="研发人员/管理层" vertex="1">
+          <mxGeometry height="60" width="30" x="405" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;rounded=1;arcSize=10;fillColor=#F5F5F5;strokeColor=#666666;fontStyle=1;fontSize=14;" value="AI智能体编排与融合架构 (AI Agent Orchestration)" vertex="1">
+          <mxGeometry height="650" width="680" x="80" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="3" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" value="L1: 交互与意图识别 (LLM)" vertex="1">
+          <mxGeometry height="20" width="200" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" value="多模态输入解析&#xa;(文字/图片)" vertex="1">
+          <mxGeometry height="50" width="140" x="270" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" value="意图识别与任务拆解&#xa;(Large Model)" vertex="1">
+          <mxGeometry height="50" width="140" x="270" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="3" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" value="L2: 知识检索与特征提取 (RAG + Agent)" vertex="1">
+          <mxGeometry height="20" width="250" x="20" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" value="关键技术路径提取&#xa;(LLM Agent)" vertex="1">
+          <mxGeometry height="50" width="140" x="150" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" value="RAG: 历史项目检索&#xa;(Knowledge Base)" vertex="1">
+          <mxGeometry height="50" width="140" x="390" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="3" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" value="L3: 精确计算与分析 (Specialized Small Models)" vertex="1">
+          <mxGeometry height="20" width="280" x="20" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=12;" value="技术特征向量化&#xa;(Embedding Model)" vertex="1">
+          <mxGeometry height="50" width="140" x="150" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=12;" value="余弦相似度计算&#xa;(Algo/Small Model)" vertex="1">
+          <mxGeometry height="50" width="140" x="390" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="3" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" value="L4: 决策生成与反馈 (LLM)" vertex="1">
+          <mxGeometry height="20" width="200" x="20" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" value="综合评估报告生成&#xa;(Large Model)" vertex="1">
+          <mxGeometry height="50" width="140" x="270" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="3" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="3" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;" target="8" value="任务分发">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="3" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="11" value="特征提取">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="3" source="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="12" value="向量输出">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="3" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;" target="12" value="检索结果">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="3" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;" target="9" value="检索指令">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="3" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="14" value="高风险/重复度数据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" value="近5年项目知识库&#xa;(Project History DB)" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" value="向量数据库&#xa;(Vector DB)" vertex="1">
+          <mxGeometry height="60" width="120" x="560" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="5" value="提问/上传">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;dashed=1;" target="9" value="读取">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;dashed=1;" target="11" value="存取">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
